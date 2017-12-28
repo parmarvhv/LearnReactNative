@@ -11,7 +11,8 @@ const placeList = props => {
         <ListItem 
         key={index} 
         placeName={place}
-        onItemPressed={() => alert(place)}
+        //onItemPressed={() => props.onPlaceDeleted(index)}
+        onItemPresses={()=> alert(place)}
          />
     ));
     return (

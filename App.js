@@ -12,9 +12,10 @@ import {
   View,
   Button,
 } from 'react-native';
-// import PlaceList from './src/components/PlaceList/PlaceList';
+
 //import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import ListItem from './src/components/ListItem/ListItem';
+import PlaceList from './src/components/PlaceList/PlaceList';
 
 export default class App extends Component<{}> {
 
@@ -93,9 +94,10 @@ export default class App extends Component<{}> {
           onPress={this.handlePlaceSubmitted}
          />
         </View>
-        <View style={styles.listContainer}>
+        <PlaceList places={this.state.places} /*onPlaceDeleted={this.handlePlaceDeleted}*/ />
+        {/* <View style={styles.listContainer}>
             {placesOutput}
-        </View>
+        </View> */}
       </View>
     );
   }
